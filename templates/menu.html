@@ -14,9 +14,10 @@
           <a class="navbar-brand" href=".">Conversion Site</a>
         </div>
           <ul class="nav navbar-nav">
-            <li {% if active_page == "home" %} class="active" {% endif %}><a href=".">Home</a></li>
-            <li {% if active_page == "Page1" %}  class="active" {% endif %}><a href="p1">Page 1</a></li> <!-- p1 will show up in the url -->
-            <li {% if active_page == "Page2" %} class="active" {% endif %}><a href="p2">Page 2</a></li>
+            <li {% if active_page == "menu" %} class="active" {% endif %}><a href=".">Menu</a></li>
+            <li {% if active_page == "kilograms" %}  class="active" {% endif %}><a href="kilograms.html">Kilograms to Grams </a></li> <!-- p1 will show up in the url -->
+            <li {% if active_page == "newtons" %} class="active" {% endif %}><a href="newtons.html">Newtons to Dynes</a></li>
+            <li {% if active_page == "pounds" %} class="active" {% endif %}><a href="pounds.html">Pounds to Newtons</a></li>
           </ul>
       </div>
     </nav>
