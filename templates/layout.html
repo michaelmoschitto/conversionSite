@@ -8,11 +8,11 @@
 
     <form action='/response'>
       {% block question %}{% endblock %} <br>
-      <input type="text" name="{% block name %} {% endblock %}">
+      <input type="text" name= {% block name %} {% endblock %}>
       <br><br>
       <input type="submit">
     </form>
-    
+
     <h1>Response:</h1>
     <p> {{ response }}</p>
   </body>
