@@ -12,7 +12,7 @@ def render_response():
             #the args field is a multi dict which is like a dict except it can have multiple values for the same key.
             # the inforation in args ifs visible in the url for the page being requested (ex... /response?color=blue)
     reply = "Thats my favorite color too!"
-    return render_template('response.html', response = reply)
+    return render_template('kilograms.html', response = reply)
 
 
 if __name__=="__main__":
