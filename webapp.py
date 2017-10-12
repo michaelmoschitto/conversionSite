@@ -12,7 +12,7 @@ def render_kilograms():
             #the request object stores the information about the request sent to the server.
             #the args field is a multi dict which is like a dict except it can have multiple values for the same key.
             # the inforation in args ifs visible in the url for the page being requested (ex... /response?color=blue)
-        reply = mass
+    reply = mass
     return render_template('kilograms.html', response = reply)
 
 
