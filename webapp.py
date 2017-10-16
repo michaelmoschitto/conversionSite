@@ -4,11 +4,11 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/")
 def render_main():
-    return render_template('menu.html')
+    return render_template('kilograms.html')
 
-@app.route("/kilograms")
-def render_kilograms():
-    mass = float(request.args['mass']):
+@app.route("/responseK")
+def render_responseK():
+    mass = 10 #float(request.args['mass']):
             #the request object stores the information about the request sent to the server.
             #the args field is a multi dict which is like a dict except it can have multiple values for the same key.
             # the inforation in args ifs visible in the url for the page being requested (ex... /response?color=blue)
