@@ -8,12 +8,9 @@
 
     <form action='/responseK'>
       {% block question %}{% endblock %} <br>
-      <input type="text" name= {% block name%}{% endblock %}>
+      <input type="number" name= {% block name%}{% endblock %}>
       <br><br>
       <input type="submit">
     </form>
-
-    <h1>Response:</h1>
-    <p> {{ response }}</p>
   </body>
 </html>
