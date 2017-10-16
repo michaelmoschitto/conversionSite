@@ -13,7 +13,7 @@ def render_kilograms():
             #the args field is a multi dict which is like a dict except it can have multiple values for the same key.
             # the inforation in args ifs visible in the url for the page being requested (ex... /response?color=blue)
     reply = mass
-    return render_template('ResponseK.html', response = reply)
+    return render_template('responseK.html', response = reply)
 
 
 if __name__=="__main__":
