@@ -6,12 +6,12 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_home():
     return render_template('home.html')
 
-@app.route("/responseM")
-def render_responseM():
-    mph = float(request.args['mph'])
+@app.route("/responseK")
+def render_responseK():
+    kilos = float(request.args['kilograms'])
     
-    response = mph * 1.6
-    return render_template('responseM.html', response = response)
+    response = kilos / 1000
+    return render_template('responseK.html', response = response)
     
 if __name__=="__home__":
     app.run(debug=False, port=54321)
