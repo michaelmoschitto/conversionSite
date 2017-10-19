@@ -3,18 +3,35 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
 @app.route("/")
-def render_main():
-    return render_template('kilograms.html')
+def render_home():
+    return render_template('home.html')
 
-@app.route("/responseK")
-def render_responseK():
-    mass =  float(request.args['mass']):
-            #the request object stores the information about the request sent to the server.
-            #the args field is a multi dict which is like a dict except it can have multiple values for the same key.
-            # the inforation in args ifs visible in the url for the page being requested (ex... /response?color=blue)
-    reply = "your new mass is " + mass / 1000.0
-    return render_template('responseK.html', response = reply)
+@app.route("/responseM")
+def render_responseM():
+    mph = float(request.args['mph'])
+    
+    response = mph * 1.6
+    return render_template('responseM.html', response = response)
+    
+if __name__=="__home__":
+    app.run(debug=False, port=54321)
 
-
-if __name__=="__main__":
+@app.route("/responseV")
+def render_responseV():
+    value = float(request.args['value'])
+    
+    response = value * .84
+    return render_template('responseV.html', response = response)
+    
+if __name__=="__home__":
+    app.run(debug=False, port=54321)
+ 
+@app.route("/responseS")
+def render_responseS():
+    sandwich = float(request.args['sandwich'])
+    
+    response = sandwich / 5
+    return render_template('responseS.html', response = response)
+    
+if __name__=="__home__":
     app.run(debug=False, port=54321)
