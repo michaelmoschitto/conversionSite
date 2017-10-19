@@ -16,12 +16,12 @@ def render_responseK():
 if __name__=="__home__":
     app.run(debug=False, port=54321)
 
-@app.route("/responseV")
-def render_responseV():
-    value = float(request.args['value'])
+@app.route("/responseN")
+def render_responseN():
+    newtons = float(request.args['newtons'])
     
-    response = value * .84
-    return render_template('responseV.html', response = response)
+    response = newtons * 1000000
+    return render_template('responseN.html', response = response)
     
 if __name__=="__home__":
     app.run(debug=False, port=54321)
