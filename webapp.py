@@ -28,9 +28,9 @@ if __name__=="__home__":
  
 @app.route("/responseS")
 def render_responseS():
-    sandwich = float(request.args['sandwich'])
+    silly = float(request.args['silly'])
     
-    response = sandwich / 5
+    response = silly * 6.6944754
     return render_template('responseS.html', response = response)
     
 if __name__=="__home__":
